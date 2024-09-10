@@ -21,9 +21,9 @@
   <body>
     <!-- Navbar -->
     <nav
-      class="navbar navbar-expand-lg bg-white border-bottom fixed-top border-body p-2"
+      class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2"
     >
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
@@ -51,7 +51,7 @@
                 Motorcycles
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="allbikes.html">All</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Available in Kenya</a>
                 </li>
@@ -59,7 +59,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Sell Your Motorcycle</a>
+              <a class="nav-link text-dark" href="sell.html">Sell Your Motorcycle</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="#">Who We Are</a>
@@ -105,12 +105,13 @@
               >
                 Explore Motorcycles
               </button>
-              <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item" href="#">Yamaha</a></li>
+              <ul class="dropdown-menu w-100 ">
+                <li><a class="dropdown-item" href="yamaha.html">Yamaha</a></li>
                 <li><a class="dropdown-item" href="#">Honda</a></li>
                 <li><a class="dropdown-item" href="#">Kawasaki</a></li>
                 <li><a class="dropdown-item" href="#">Suzuki</a></li>
                 <li><a class="dropdown-item" href="#">BMW</a></li>
+                <li><a class="dropdown-item" href="allbikes.html">All</a></li>
               </ul>
             </div>
           </div>
@@ -141,7 +142,7 @@
 
         <!-- Image Section -->
         <div class="text-center mt-4">
-          <img src="asset 6.webp" class="img-fluid w-50" alt="Motorcycles" />
+          <img src="images/asset 6.webp" class="img-fluid w-50" alt="Motorcycles" />
         </div>
       </div>
     </div>
@@ -161,7 +162,7 @@
         </div>
         <div class="col-12 col-md-6 mt-4">
           <img
-            src="asset 92.png"
+            src="images/asset 92.png"
             class="img-fluid w-50"
             alt="Your perfect fit"
           />
@@ -170,7 +171,7 @@
       <div class="row justify-content-center align-items-center mb-4 mt-4">
         <div class="col-12 col-md-6">
           <img
-            src="asset 92.png"
+            src="images/asset 92.png"
             class="img-fluid w-50"
             alt="Your perfect fit"
           />
@@ -196,7 +197,7 @@
           >
             <!-- Image with a dark overlay -->
             <img
-              src="asset 5.webp"
+              src="images/asset 5.webp"
               class="card-img mh-100 object-fit-cover"
               style="height: 350px"
               alt="..."
@@ -210,8 +211,8 @@
             <div class="card-img-overlay text-white">
               <div class="row justify-content-center">
                 <div class="col-12 col-md-8">
-                  <h2 class="card-title">Who We Are</h2>
-                  <p class="card-text">
+                  <h2 class="card-title text-center">Who We Are</h2>
+                  <p class="card-text text-center">
                     M-Motors is a leading motorcycle dealership in Kenya,
                     operating as a Limited Liability Company (LLC). We
                     specialize exclusively in motorcycles, offering a
@@ -232,112 +233,206 @@
         </div>
       </div>
     </div>
-    <div class="container p-4">
-      <h2 class="card-title">Browse Catalogue</h2>
-      <p class="card-text">
-        M-Motors is a leading motorcycle dealership in Kenya, operating as a
-        Limited Liability Company (LLC). We specialize exclusively in
+    <div class="container-fluid p-4">
+      <h2 class="card-title text-center mt-4">Hot Deals</h2>
+      <p class="card-text text-center mb-4">
+         We specialize exclusively in
         motorcycles, offering a streamlined experience for buyers and sellers
         alike.
       </p>
-      <div class="row row-cols-1 row-cols-md-3 g-3">
-        <div class="col">
+      <div class="row row-cols-1 row-cols-md-5 g-3">
           <div class="col">
-            <div class="card border-0">
-              <img src="asset 91.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
-              <div class="card-body">
-                <!-- Bike Make -->
-                <h4 class="card-title d-flex justify-content-between align-items-center">
-                  Ducati XDiavel S
-                  <!-- Year of Manufacture -->
-                  <!-- <span class="badge bg-secondary text-dark">2022</span> -->
-                </h4>
-              
-                
-                <!-- Short Description -->
-                <p class="card-text text-truncate">
-                  The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
-                  available performance, and the full complement of technology as standard. It’s blisteringly quick,
-                  with masses of torque for easy riding.
-                </p>
-                
-                <!-- Bike Details -->
-                <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
-                  <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
-                  <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
-                  <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800Kg</small></li>
-                  <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
-                </ul>
-                
-                <!-- Price -->
-                <p class="card-price text-success fw-light mt-2 mb-0">KES 5,000,000</p>
-                
-                <!-- Location -->
-                <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+            <a href="#" class="text-decoration-none">
+              <div class="card border-0">
+                <img src="images/asset 91.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
+                <div class="card-body">
+                  <!-- Bike Make -->
+                  <h4 class="card-title d-flex justify-content-between align-items-center mt-3">
+                    Ducati XDiavel S
+                    <!-- Year of Manufacture -->
+                    <!-- <span class="badge bg-secondary text-dark">2022</span> -->
+                  </h4>
+                  
+                  <!-- Short Description -->
+                  <p class="card-text text-truncate">
+                    The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
+                    available performance, and the full complement of technology as standard. It’s blisteringly quick,
+                    with masses of torque for easy riding.
+                  </p>
+                  
+                  <!-- Bike Details -->
+                  <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800kg</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>2886km</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
+                  </ul>
+                  
+                  <!-- Price -->
+                  <p class="card-price text-success fw-bold mt-2 mb-0">KES 5,000,000</p>
+                  
+                  <!-- Location -->
+                  <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+                </div>
               </div>
-            </div>
+            </a>
+            
           </div>
           
+     
+
+        <div class="col">
+         <a href="#" class="text-decoration-none">
+              <div class="card border-0">
+                <img src="images/asset 94.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
+                <div class="card-body">
+                  <!-- Bike Make -->
+                  <h4 class="card-title d-flex justify-content-between align-items-center mt-3">
+                    Ducati XDiavel S
+                    <!-- Year of Manufacture -->
+                    <!-- <span class="badge bg-secondary text-dark">2022</span> -->
+                  </h4>
+                  
+                  <!-- Short Description -->
+                  <p class="card-text text-truncate">
+                    The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
+                    available performance, and the full complement of technology as standard. It’s blisteringly quick,
+                    with masses of torque for easy riding.
+                  </p>
+                  
+                  <!-- Bike Details -->
+                  <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800kg</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>2886km</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
+                  </ul>
+                  
+                  <!-- Price -->
+                  <p class="card-price text-success fw-bold mt-2 mb-0">KES 5,000,000</p>
+                  
+                  <!-- Location -->
+                  <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+                </div>
+              </div>
+            </a>
         </div>
 
         <div class="col">
-          <div class="card border-0">
-            <img src="asset 94.png" class="card-img-top image-fluid" alt="Motorcycle Image" />
-            <div class="card-body">
-              <!-- Bike Make -->
-              <h3 class="card-title">Make of Bike</h3>
-
-              <!-- Short Description -->
-              <p class="card-text">
-                This is a brief description of the bike, highlighting key
-                features and benefits.
-              </p>
-
-              <!-- Bike Details -->
-              <ul class="list-unstyled">
-                <li><strong>Engine Size:</strong> 600cc</li>
-                <li><strong>Weight:</strong> 180kg</li>
-                <li><strong>Year of Manufacture:</strong> 2022</li>
-              </ul>
-
-              <!-- Price -->
-              <p class="card-price text-success fw-bold mt-2 mb-0">$8,000</p>
-
-              <!-- Location -->
-              <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card border-0">
-            <img src="asset 92.png" class="card-img-top img-fluid alt="Motorcycle Image" />
-            <div class="card-body">
-              <!-- Bike Make -->
-              <h3 class="card-title">Make of Bike</h3>
-
-              <!-- Short Description -->
-              <p class="card-text">
-                This is a brief description of the bike, highlighting key
-                features and benefits.
-              </p>
-
-              <!-- Bike Details -->
-              <ul class="list-unstyled">
-                <li><strong>Engine Size:</strong> 600cc</li>
-                <li><strong>Weight:</strong> 180kg</li>
-                <li><strong>Year of Manufacture:</strong> 2022</li>
-              </ul>
-
-              <!-- Price -->
-              <p class="card-price text-success fw-bold mt-2 mb-0">$8,000</p>
-
-              <!-- Location -->
-              <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
-            </div>
-          </div>
-        </div>
+          <a href="#" class="text-decoration-none">
+              <div class="card border-0">
+                <img src="images/asset 92.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
+                <div class="card-body">
+                  <!-- Bike Make -->
+                  <h4 class="card-title d-flex justify-content-between align-items-center mt-3">
+                    Ducati XDiavel S
+                    <!-- Year of Manufacture -->
+                    <!-- <span class="badge bg-secondary text-dark">2022</span> -->
+                  </h4>
+                  
+                  <!-- Short Description -->
+                  <p class="card-text text-truncate">
+                    The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
+                    available performance, and the full complement of technology as standard. It’s blisteringly quick,
+                    with masses of torque for easy riding.
+                  </p>
+                  
+                  <!-- Bike Details -->
+                  <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
+                    <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800kg</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>2886km</small></li>
+                    <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
+                  </ul>
+                  
+                  <!-- Price -->
+                  <p class="card-price text-success fw-bold mt-2 mb-0">KES 5,000,000</p>
+                  
+                  <!-- Location -->
+                  <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+                </div>
+              </div>
+            </a>
       </div>
+      <div class="col">
+        <a href="#" class="text-decoration-none">
+             <div class="card border-0">
+               <img src="images/asset 94.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
+               <div class="card-body">
+                 <!-- Bike Make -->
+                 <h4 class="card-title d-flex justify-content-between align-items-center mt-3">
+                   Ducati XDiavel S
+                   <!-- Year of Manufacture -->
+                   <!-- <span class="badge bg-secondary text-dark">2022</span> -->
+                 </h4>
+                 
+                 <!-- Short Description -->
+                 <p class="card-text text-truncate">
+                   The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
+                   available performance, and the full complement of technology as standard. It’s blisteringly quick,
+                   with masses of torque for easy riding.
+                 </p>
+                 
+                 <!-- Bike Details -->
+                 <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
+                   <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
+                   <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800kg</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>2886km</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
+                 </ul>
+                 
+                 <!-- Price -->
+                 <p class="card-price text-success fw-bold mt-2 mb-0">KES 5,000,000</p>
+                 
+                 <!-- Location -->
+                 <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+               </div>
+             </div>
+           </a>
+       </div>
+
+       <div class="col">
+         <a href="#" class="text-decoration-none">
+             <div class="card border-0">
+               <img src="images/asset 92.png" class="card-img-top img-fluid" alt="Motorcycle Image" />
+               <div class="card-body">
+                 <!-- Bike Make -->
+                 <h4 class="card-title d-flex justify-content-between align-items-center mt-3">
+                   Ducati XDiavel S
+                   <!-- Year of Manufacture -->
+                   <!-- <span class="badge bg-secondary text-dark">2022</span> -->
+                 </h4>
+                 
+                 <!-- Short Description -->
+                 <p class="card-text text-truncate">
+                   The XDiavel is a revelation for the cruiser market in terms of handling prowess, 
+                   available performance, and the full complement of technology as standard. It’s blisteringly quick,
+                   with masses of torque for easy riding.
+                 </p>
+                 
+                 <!-- Bike Details -->
+                 <ul class="list-unstyled d-flex flex-wrap justify-content-start gap-2 bg-white p-1 rounded">
+                   <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>2022</small></li>
+                   <li class="text-wrap text-bg-light p-2 rounded fw-medium"><small>1200cc</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>800kg</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>2886km</small></li>
+                   <li class="text-wrap text-bg-light rounded fw-medium p-2"><small>Kenyan Used</small></li>
+                 </ul>
+                 
+                 <!-- Price -->
+                 <p class="card-price text-success fw-bold mt-2 mb-0">KES 5,000,000</p>
+                 
+                 <!-- Location -->
+                 <p class="card-location text-muted mb-0">Nairobi, Kenya</p>
+               </div>
+             </div>
+           </a>
+     </div> 
+    </div>
     </div>
     <!-- Footer Section -->
     <div class="container-fluid mt-4">
@@ -359,16 +454,16 @@
             <div class="col-12 col-md-4 mb-3 d-flex flex-column">
               <h5>Follow Us</h5>
               <div class="mb-5">
-                <a href="#" class="text-dark me-2"
+                <a href="#" class="text-dark me-3"
                   ><i class="bi bi-twitter"></i
                 ></a>
-                <a href="#" class="text-dark me-2"
+                <a href="#" class="text-dark me-3"
                   ><i class="bi bi-instagram"></i
                 ></a>
-                <a href="#" class="text-dark me-2"
+                <a href="#" class="text-dark me-3"
                   ><i class="bi bi-tiktok"></i
                 ></a>
-                <a href="#" class="text-dark me-2"
+                <a href="#" class="text-dark me-3"
                   ><i class="bi bi-youtube"></i
                 ></a>
               </div>
@@ -385,7 +480,7 @@
                   placeholder="Your email address"
                   aria-label="Email address"
                 />
-                <button type="submit" class="btn btn-outline-warning">
+                <button type="submit" class="btn btn-dark">
                   Subscribe
                 </button>
               </form>
@@ -394,12 +489,13 @@
             <!-- Column 3: Quick Links -->
             <div class="col-12 col-md-4 mb-3 d-flex flex-column">
               <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-dark">Home</a></li>
-                <li><a href="#" class="text-dark">Motorcycles</a></li>
-                <li><a href="#" class="text-dark">Sell Your Motorcycle</a></li>
-                <li><a href="#" class="text-dark">Contact Us</a></li>
+              <ul class="list-unstyled footerlink">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="allbikes.html">Motorcycles</a></li>
+                <li><a href="sell.html">Sell Your Motorcycle</a></li>
+                <li><a href="#">Contact Us</a></li>
               </ul>
+              
             </div>
           </div>
         </div>
@@ -412,43 +508,30 @@
       </footer>
     </div>
 
-    <!-- Back to Top Button -->
-    <a
-      href="#"
-      id="back-to-top"
-      class="btn btn-outline-light rounded-5 position-fixed bottom-0 end-0 m-3"
-      style="display: none"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </a>
+  <!-- WhatsApp Chat Button -->
+<a
+href="https://wa.me/254700000000"
+target="_blank"
+id="whatsapp-chat"
+class="btn btn-success d-flex justify-content-center align-items-center rounded-circle position-fixed bottom-0 end-0 m-3"
+style="display: block; font-size: 24px; width: 48px; height: 48px;"
+>
+<i class="bi bi-whatsapp"></i>
+</a>
 
-    <!-- Back to Top Script -->
-    <script>
-      // Show or hide the button when scrolling
-      window.onscroll = function () {
-        var backToTopButton = document.getElementById("back-to-top");
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          backToTopButton.style.display = "block";
-        } else {
-          backToTopButton.style.display = "none";
-        }
-      };
+<!-- WhatsApp Chat Icon Script (Optional for toggle visibility based on scroll) -->
+<script>
+// Optionally hide the button when not needed
+window.onscroll = function () {
+  var whatsappButton = document.getElementById("whatsapp-chat");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    whatsappButton.style.display = "block";
+  } else {
+    whatsappButton.style.display = "block"; // You can hide if needed
+  }
+};
+</script>
 
-      // Smooth scroll to top when the button is clicked
-      document
-        .getElementById("back-to-top")
-        .addEventListener("click", function (event) {
-          event.preventDefault();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    </script>
-
-    <!-- Bootstrap Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

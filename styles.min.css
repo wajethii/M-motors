@@ -2,8 +2,90 @@
 body {
     font-family: 'Roboto', sans-serif;
   }
+  .nav-link {
+    color: #000;
+    text-decoration: none;
+  }
+  .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: rgba(0, 0, 0, 0.75);
+  }
   h1, h2, h3, .navbar-brand {
     font-family: 'Roboto Condensed', sans-serif;
+  }
+  .footerlink a {
+    color: #000; /* Text-dark */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .footerlink a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(0, 0, 0, 0.75); /* Hover underline effect */
+  }
+  .breadcrumb {
+    background-color: #f8f9fa; /* Light background color for breadcrumbs */
+    padding: 0.75rem 1.25rem; /* Padding for breadcrumb container */
+    margin-bottom: 1rem; /* Margin below breadcrumbs */
+    border-radius: 0.25rem; /* Rounded corners */
+  }
+  
+  .breadcrumb-item {
+    display: inline; /* Display items inline */
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    
+    padding: 0 0.5rem; /* Space between breadcrumb items */
+    color: #000; /* Separator color */
+  }
+  
+  .breadcrumb-item a {
+    color: #000; /* Text-dark color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .breadcrumb-item a:hover {
+    text-decoration: underline; /* Underline on hover */
+    text-underline-offset: 3px; /* Space between text and underline */
+    text-decoration-color: rgba(0, 0, 0, 0.75); /* Hover underline color */
+  }
+  
+  .breadcrumb-item.active {
+    color: gray; /* Text color for the active item */
+  }
+  
+/* Ensure form elements use dark theme on focus, active, and hover */
+.form-control:focus, 
+.form-select:focus, 
+.form-select:hover, /* Hover state for select elements */
+.btn:focus, 
+.btn:active {
+  border-color: #343a40; /* Dark border */
+  box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.25); /* Dark shadow */
+  outline: none; /* Remove outline */
+}
+.rounded-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  
+/* Ensure buttons stay dark on click and hover */
+.btn-dark:focus, 
+.btn-dark:active, 
+.btn-dark:hover {
+  background-color: #343a40 !important; /* Dark background */
+  border-color: #343a40 !important;     /* Dark border */
+}
+.card.border-success {
+    border-color: #28a745 !important;
+  }
+  .card.shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+  .card.text-success .card-body {
+    color: #28a745 !important;
   }
   
   /* Responsive icons */
