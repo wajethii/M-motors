@@ -47,7 +47,7 @@
       class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
         <button
@@ -74,7 +74,7 @@
                 Motorcycles
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="allbikes.html">All</a></li>
+                <li><a class="dropdown-item" href="allbikes.php">All</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Available in Kenya</a>
                 </li>
@@ -82,15 +82,15 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="sell.html"
+              <a class="nav-link text-dark" href="sell.php"
                 >Sell Your Motorcycle</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="about.html">Who We Are</a>
+              <a class="nav-link text-dark" href="about.php">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-dark" href="contact.html">Contacts</a>
+              <a class="nav-link active text-dark" href="contact.php">Contacts</a>
             </li>
           </ul>
           <!-- Icons -->
@@ -107,7 +107,7 @@
     <div class="row mb-4 mt-4 justify-content-center position-relative" style="z-index: 1;">
       
       <!-- Contact Form -->
-      <div class="col-12 col-md-5 mt-5">
+      <div class="col-12 col-md-4 mt-5">
         <div class="card p-4 border-0 bg-white rounded-0">
           <h5 class="mb-4">WE’D LIKE TO HEAR FROM YOU</h5>
           <form action="#" class="row g-3">
@@ -254,10 +254,10 @@
             <div class="col-12 col-md-4 mb-3">
               <h5>Quick Links</h5>
               <ul class="list-unstyled footerlink">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="allbikes.html">Motorcycles</a></li>
-                <li><a href="sell.html">Sell Your Motorcycle</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="allbikes.php">Motorcycles</a></li>
+                <li><a href="sell.php">Sell Your Motorcycle</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
               </ul>
             </div>
           </div>
@@ -269,33 +269,6 @@
         </div>
       </footer>
     </div>
-
-    <!-- WhatsApp Chat Button -->
-    <a
-      href="https://wa.me/254700000000"
-      target="_blank"
-      id="whatsapp-chat"
-      class="btn btn-success d-flex justify-content-center align-items-center rounded-circle position-fixed bottom-0 end-0 m-3"
-      style="display: block; font-size: 24px; width: 48px; height: 48px"
-    >
-      <i class="bi bi-whatsapp"></i>
-    </a>
-
-    <!-- WhatsApp Chat Icon Script (Optional for toggle visibility based on scroll) -->
-    <script>
-      // Optionally hide the button when not needed
-      window.onscroll = function () {
-        var whatsappButton = document.getElementById("whatsapp-chat");
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          whatsappButton.style.display = "block";
-        } else {
-          whatsappButton.style.display = "block"; // You can hide if needed
-        }
-      };
-    </script>
 
     <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>

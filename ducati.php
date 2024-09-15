@@ -22,7 +22,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
         <button
@@ -49,7 +49,7 @@
                 Motorcycles
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="allbikes.html">All</a></li>
+                <li><a class="dropdown-item" href="allbikes.php">All</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Available in Kenya</a>
                 </li>
@@ -57,7 +57,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="sell.html">Sell Your Motorcycle</a>
+              <a class="nav-link text-dark" href="sell.php">Sell Your Motorcycle</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="#">Who We Are</a>
@@ -81,8 +81,8 @@
             <div class="col-12 col-md-6 mt-3">
             <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb"> 
                 <ol class="breadcrumb bg-white">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="allbikes.html">Motorcycles</a></li>
+                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="allbikes.php">Motorcycles</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Yamaha</li>
                 </ol>
               </nav>
@@ -678,9 +678,9 @@
               <div class="col-12 col-md-4 mb-3">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled footerlink">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="allbikes.html">Motorcycles</a></li>
-                  <li><a href="sell.html">Sell Your Motorcycle</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="allbikes.php">Motorcycles</a></li>
+                  <li><a href="sell.php">Sell Your Motorcycle</a></li>
                   <li><a href="#">Contact Us</a></li>
                 </ul>
               </div>

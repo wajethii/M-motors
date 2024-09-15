@@ -18,13 +18,13 @@
     />
     <link rel="stylesheet" href="styles.min.css" />
   </head>
-  <body>
+  <body class="bg-light">
     <!-- Navbar -->
     <nav
       class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
         <button
@@ -67,7 +67,7 @@
               <a class="nav-link text-dark" href="#">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="contact.html">Contacts</a>
+              <a class="nav-link text-dark" href="contact.php">Contacts</a>
             </li>
           </ul>
           <!-- Icons -->
@@ -112,7 +112,7 @@
       </div>
 
       <!-- Step 1: Motorcycle Details -->
-      <div id="step1" class="col-12 col-md-8 mt-5">
+      <div id="step1" class="col-12 col-md-4 mt-5">
         <div class="card shadow p-4 border-0">
           <h5 class="mb-4">Motorcycle Details</h5>
           <form id="multistepFormStep1" class="row g-3">
@@ -197,7 +197,7 @@
       </div>
 
       <!-- Step 2: Contact Details and Image Upload -->
-      <div id="step2" class="col-12 col-md-8 mt-5" style="display: none;">
+      <div id="step2" class="col-12 col-md-4 mt-5" style="display: none;">
         <div class="card shadow p-4 border-0">
           <h5 class="mb-4">Contact Details & Images</h5>
           <form id="multistepFormStep2" class="row g-3">
@@ -271,7 +271,7 @@
   
     <!-- Footer Section -->
     <div class="container-fluid mt-4">
-      <footer class="bg-light text-dark">
+      <footer class="bg-white">
         <div class="container-fluid">
           <div class="row justify-content-center text-center">
             <!-- Column 1: About M-Motors -->
@@ -284,16 +284,16 @@
             <div class="col-12 col-md-4 mb-3">
               <h5>Follow Us</h5>
               <div class="mb-4">
-                <a href="#" class="text-dark me-3"
+                <a href="#" class="text-white me-3"
                   ><i class="bi bi-twitter"></i
                 ></a>
-                <a href="#" class="text-dark me-3"
+                <a href="#" class="text-white me-3"
                   ><i class="bi bi-instagram"></i
                 ></a>
-                <a href="#" class="text-dark me-3"
+                <a href="#" class="text-white me-3"
                   ><i class="bi bi-tiktok"></i
                 ></a>
-                <a href="#" class="text-dark me-3"
+                <a href="#" class="text-white me-3"
                   ><i class="bi bi-youtube"></i
                 ></a>
               </div>
@@ -318,10 +318,10 @@
             <div class="col-12 col-md-4 mb-3">
               <h5>Quick Links</h5>
               <ul class="list-unstyled footerlink">
-                <li><a href="#">Home</a></li>
-                <li><a href="allbikes.html">Motorcycles</a></li>
-                <li><a href="#">Sell Your Motorcycle</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="allbikes.php">Motorcycles</a></li>
+                <li><a href="sell.php">Sell Your Motorcycle</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
               </ul>
             </div>
           </div>

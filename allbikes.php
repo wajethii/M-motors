@@ -22,7 +22,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.php">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
         <button
@@ -81,8 +81,8 @@
             <div class="col-12 col-md-6 mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="allbikes.html">Motorcycles</a></li>
+                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="allbikes.php">Motorcycles</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Yamaha</li>
                 </ol>
               </nav>
