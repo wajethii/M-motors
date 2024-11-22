@@ -9,7 +9,13 @@ if (!isset($_SESSION['username'])) {
 }
 
 include ('headeradmin.php');
+include 'admincon.php';
 
+// Check for success flag in the query string
+$successMessage = '';
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+    $successMessage = "The motorcycle and its images were successfully added!";
+}
 ?>
  
   <div class="container-fluid">
@@ -75,6 +81,14 @@ include ('headeradmin.php');
           <h2 class="mt-4">Motorcycles</h2>
           <button class="btn btn-dark" data-bs-toggle="offcanvas" data-bs-target="#addMotorcycleForm">Add Motorcycle</button>
         </div>
+        <!-- Display success message -->
+        <?php if ($successMessage): ?>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <?php echo htmlspecialchars($successMessage, ENT_QUOTES, 'UTF-8'); ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <?php endif; ?>
 <!-- Offcanvas for Adding a Motorcycle -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="addMotorcycleForm" aria-labelledby="addMotorcycleFormLabel">
     <div class="offcanvas-header">
@@ -82,7 +96,7 @@ include ('headeradmin.php');
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form id="motorcycleForm" method="POST" action="add_motorcycle.php" enctype="multipart/form-data">
+        <form id="motorcycleForm" method="POST" action="_bike.php" enctype="multipart/form-data">
             <!-- Asali -->
             <div style="position: absolute; left: -9999px; visibility: hidden;">
                 <label for="extrainfo">_</label>
