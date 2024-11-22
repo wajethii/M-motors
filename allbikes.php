@@ -49,7 +49,7 @@
                 Motorcycles
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">All</a></li>
+                <li><a class="dropdown-item" href="allbikes.php">All</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Available in Kenya</a>
                 </li>
@@ -57,17 +57,17 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Sell Your Motorcycle</a>
+              <a class="nav-link text-dark" href="sell.php">Sell Your Motorcycle</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="#">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Contacts</a>
+              <a class="nav-link text-dark" href="contacts.php">Contacts</a>
             </li>
           </ul>
           <!-- Icons -->
-          <a class="nav-link me-3" href="#"
+          <a class="nav-link me-3" href="login.php"
             ><i class="bi bi-person text-dark"></i
           ></a>
           <a class="nav-link" href="#"><i class="bi bi-cart2 text-dark"></i></a>

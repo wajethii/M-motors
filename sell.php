@@ -71,9 +71,6 @@
             </li>
           </ul>
           <!-- Icons -->
-          <a class="nav-link me-3" href="#"
-            ><i class="bi bi-person text-dark"></i
-          ></a>
           <a class="nav-link" href="#"><i class="bi bi-cart2 text-dark"></i></a>
         </div>
       </div>

@@ -68,13 +68,10 @@
               <a class="nav-link text-dark" href="#">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Contacts</a>
+              <a class="nav-link text-dark" href="contact.php">Contacts</a>
             </li>
           </ul>
           <!-- Icons -->
-          <a class="nav-link me-3" href="login.php"
-            ><i class="bi bi-person text-dark"></i
-          ></a>
           <a class="nav-link" href="#"><i class="bi bi-cart2 text-dark"></i></a>
         </div>
       </div>
@@ -107,10 +104,7 @@
             Explore Motorcycles
           </button>
           <ul class="dropdown-menu w-100">
-            <li><a class="dropdown-item" href="yamaha.php">Yamaha</a></li>
-            <li><a class="dropdown-item" href="#">Honda</a></li>
-            <li><a class="dropdown-item" href="#">Kawasaki</a></li>
-            <li><a class="dropdown-item" href="#">Suzuki</a></li>
+            <li><a class="dropdown-item" href="ducati.php">Ducati</a></li>
             <li><a class="dropdown-item" href="zontes.php">Zontes</a></li>
             <li><a class="dropdown-item" href="allbikes.php">All</a></li>
           </ul>
@@ -137,7 +131,7 @@
 
       <!-- Sell a Motorcycle Button -->
       <div class="col-12 col-md-3 mb-4">
-        <a href="#" class="btn btn-outline-dark w-100">Sell a Motorcycle</a>
+        <a href="sell.php" class="btn btn-outline-dark w-100">Sell a Motorcycle</a>
       </div>
     </div>
   </div>
