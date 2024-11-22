@@ -28,10 +28,9 @@ $isLoggedIn = isset($_SESSION['user_id']);
       </a>
 
       <!-- Toggler Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvasMenu" aria-controls="mobileOffcanvasMenu" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
       <!-- Collapsible Content with Icons -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -44,12 +43,6 @@ $isLoggedIn = isset($_SESSION['user_id']);
                 <div class="col-12 col-md-4">
                   <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Notifications">
                     <i class="bi bi-bell text-dark"></i>
-                  </a>
-                </div>
-                <!-- Logout Icon -->
-                <div class="col-12 col-md-4">
-                  <a class="nav-link" href="logout.php" data-bs-toggle="tooltip" data-bs-placement="top" title="Logout">
-                    <i class="bi bi-box-arrow-right text-danger"></i>
                   </a>
                 </div>
               </div>
