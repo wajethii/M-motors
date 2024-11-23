@@ -2,7 +2,13 @@
 include 'admincon.php';
 session_start();
 
-// Asali mpe
+// CSRF Protection (recommended to include a token in the form)
+if ($_SESSION['token'] !== $_POST['csrf_token']) {
+    http_response_code(403); // Forbidden
+    exit('Forbidden: Invalid CSRF token.');
+}
+
+// Bot Detection
 if (!empty($_POST['extrainfo'])) {
     http_response_code(403); // Forbidden
     exit('Forbidden: Bot detected.');
@@ -15,37 +21,47 @@ if (
     empty($_POST['top_speed']) || empty($_POST['power'])
 ) {
     http_response_code(400); // Bad Request
-    exit('Invalid input: Required fields are missing.');
+    exit('Invalid input: Required fields missing.');
 }
 
-// Sanitize and assign POST data to variables
-$name = trim($_POST['name']);
-$type = trim($_POST['type']);
-$price = (float)$_POST['price'];
-$status = trim($_POST['status']);
-$description = trim($_POST['description']);
-$engine_size = (float)$_POST['engine_size'];
-$transmission = trim($_POST['transmission']);
-$top_speed = (float)$_POST['top_speed'];
-$power = (float)$_POST['power'];
+// Sanitize and validate input
+$name = trim(htmlspecialchars($_POST['name']));
+$type = trim(htmlspecialchars($_POST['type']));
+$price = filter_var($_POST['price'], FILTER_VALIDATE_FLOAT);
+$status = trim(htmlspecialchars($_POST['status']));
+$description = trim(htmlspecialchars($_POST['description']));
+$engine_size = filter_var($_POST['engine_size'], FILTER_VALIDATE_INT);
+$transmission = trim(htmlspecialchars($_POST['transmission']));
+$top_speed = filter_var($_POST['top_speed'], FILTER_VALIDATE_INT);
+$power = filter_var($_POST['power'], FILTER_VALIDATE_INT);
+$fuel_consumption = trim(htmlspecialchars($_POST['fuel_consumption']));
+$fuel_tank_capacity = filter_var($_POST['fuel_tank_capacity'], FILTER_VALIDATE_INT);
+$weight = trim(htmlspecialchars($_POST['weight']));
+$clutch_type = filter_var($_POST['clutch_type'], FILTER_VALIDATE_INT);
+$brake_type = filter_var($_POST['brake_type'], FILTER_VALIDATE_INT);
+$front_tire_size = trim(htmlspecialchars($_POST['front_tire_size']));
+$rear_tire_size = filter_var($_POST['rear_tire_size'], FILTER_VALIDATE_INT);
+$key_system = trim(htmlspecialchars($_POST['key_system']));
 $created_at = date('Y-m-d H:i:s'); // Current timestamp
 
-// Validate and handle image uploads
+if ($price === false || $engine_size === false || $top_speed === false || $power === false) {
+    http_response_code(400);
+    exit('Invalid numeric inputs.');
+}
+
+// Image handling
 $imagePaths = [];
 $uploadDir = 'uploads/motorcycles/';
-
-// Ensure the directory exists
-if (!is_dir($uploadDir) && !mkdir($uploadDir, 0777, true)) {
-    http_response_code(500); // Server error
-    exit('Failed to create upload directory.');
+if (!is_dir($uploadDir)) {
+    mkdir($uploadDir, 0755, true);
 }
 
 if (isset($_FILES['images']) && !empty($_FILES['images']['name'][0])) {
     foreach ($_FILES['images']['tmp_name'] as $key => $tmpName) {
-        $fileName = basename($_FILES['images']['name'][$key]);
+        $fileName = preg_replace('/[^a-zA-Z0-9\-_\.]/', '', basename($_FILES['images']['name'][$key]));
         $targetFilePath = $uploadDir . uniqid() . '_' . $fileName;
 
-        // Check file type and size
+        // Validate file type and size
         $fileType = mime_content_type($tmpName);
         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
@@ -53,62 +69,69 @@ if (isset($_FILES['images']) && !empty($_FILES['images']['name'][0])) {
             http_response_code(400);
             exit('Invalid image type. Only JPG, PNG, and GIF are allowed.');
         }
-
         if ($_FILES['images']['size'][$key] > 5 * 1024 * 1024) { // 5MB limit
             http_response_code(400);
             exit('File size exceeds the 5MB limit.');
         }
 
-        // Move the uploaded file
+        // Move file
         if (!move_uploaded_file($tmpName, $targetFilePath)) {
-            http_response_code(500); // Server error
+            http_response_code(500);
             exit('Failed to upload images.');
         }
 
         $imagePaths[] = $targetFilePath;
     }
 } else {
-    http_response_code(400); // Bad Request
+    http_response_code(400);
     exit('No images uploaded.');
 }
 
-// Insert motorcycle data into the database
-$conn->autocommit(false); // Begin transaction
-
+// Insert data into the database
 try {
-    // Insert into motorcycles table
-    $stmt = $conn->prepare("
-        INSERT INTO motorcycle 
-        (name, type, price, status, description, engine_size, transmission, top_speed, power, created_at) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    ");
-    $stmt->bind_param("ssisssssss", $name, $type, $price, $status, $description, $engine_size, $transmission, $top_speed, $power, $created_at);
+    $conn->begin_transaction();
 
+    // Insert into `motorcycle`
+    $sqlMotorcycle = "
+        INSERT INTO motorcycle (name, type, price, status, description, created_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+    ";
+    $stmt = $conn->prepare($sqlMotorcycle);
+    $stmt->bind_param('ssdsss', $name, $type, $price, $status, $description, $created_at);
     if (!$stmt->execute()) {
-        throw new Exception("Failed to insert motorcycle data: " . $stmt->error);
+        throw new Exception($stmt->error);
+    }
+    $motorcycleId = $conn->insert_id;
+
+    // Insert into `motorcycle_specs`
+    $sqlSpecs = "
+        INSERT INTO motorcycle_specs (motorcycle_id, engine_size, transmission, top_speed, power, fuel_consumption, fuel_tank_capacity, weight, clutch_type, brake_type, front_tire_size, rear_tire_size, key_system)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ";
+    $stmtSpecs = $conn->prepare($sqlSpecs);
+    $stmtSpecs->bind_param('iisiisiiissis', $motorcycleId, $engine_size, $transmission, $top_speed, $power, $fuel_consumption, $fuel_tank_capacity, $weight, $clutch_type, $brake_type, $front_tire_size, $rear_tire_size, $key_system);
+    if (!$stmtSpecs->execute()) {
+        throw new Exception($stmtSpecs->error);
     }
 
-    $motorcycleId = $stmt->insert_id; // Get the last inserted ID
-    $stmt->close();
-
-    // Insert image paths into the motorcycle_images table
-    $stmt = $conn->prepare("INSERT INTO motorcycle_images (motorcycle_id, image_path) VALUES (?, ?)");
+    // Insert into `motorcycle_images`
+    $sqlImages = "INSERT INTO motorcycle_images (motorcycle_id, image_path) VALUES (?, ?)";
+    $stmtImages = $conn->prepare($sqlImages);
     foreach ($imagePaths as $path) {
-        $stmt->bind_param("is", $motorcycleId, $path);
-        if (!$stmt->execute()) {
-            throw new Exception("Failed to insert image record: " . $stmt->error);
+        $stmtImages->bind_param('is', $motorcycleId, $path);
+        if (!$stmtImages->execute()) {
+            throw new Exception($stmtImages->error);
         }
     }
-    $stmt->close();
 
-    $conn->commit(); // Commit transaction
+    $conn->commit();
 
-    // Redirect to the same page with success flag
-    header('Location: _bike.php?success=1');
+    // Redirect after successful insertion
+    header('Location: addbike.php?success=1');
     exit();
-
 } catch (Exception $e) {
-    $conn->rollback(); // Roll back transaction on error
-    echo "Error: " . $e->getMessage(); // Display the specific error
-    exit();
+    $conn->rollback();
+    error_log("Error inserting motorcycle: " . $e->getMessage());
+    http_response_code(500);
+    exit('An error occurred. Please try again later.');
 }

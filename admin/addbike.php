@@ -96,91 +96,128 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <form id="motorcycleForm" method="POST" action="_bike.php" enctype="multipart/form-data">
-            <!-- Asali -->
-            <div style="position: absolute; left: -9999px; visibility: hidden;">
-                <label for="extrainfo">_</label>
-                <input type="text" id="extrainfo" name="extrainfo">
+    <form id="motorcycleForm" method="POST" action="_bike.php" enctype="multipart/form-data">
+    <!-- Asali -->
+    <div style="position: absolute; left: -9999px; visibility: hidden;">
+        <label for="extrainfo">_</label>
+        <input type="text" id="extrainfo" name="extrainfo">
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Basic Motorcycle Details -->
+            <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Motorcycle Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="invalid-feedback">Please provide the motorcycle name.</div>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="name" class="form-label">Motorcycle Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                        <div class="invalid-feedback">Please provide the motorcycle name.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="type" class="form-label">Type</label>
-                        <select class="form-select" id="type" name="type" required>
-                            <option value="">Select Type</option>
-                            <option value="imported">Imported</option>
-                            <option value="showroom">In Showroom</option>
-                            <option value="selling_on_behalf">Selling on Behalf</option>
-                        </select>
-                        <div class="invalid-feedback">Please select the motorcycle type.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="price" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="price" name="price" required>
-                        <div class="invalid-feedback">Please provide the price.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select class="form-select" id="status" name="status" required>
-                            <option value="">Select Status</option>
-                            <option value="in_showroom">In Showroom</option>
-                            <option value="selling_on_behalf">Selling on Behalf</option>
-                        </select>
-                        <div class="invalid-feedback">Please select the status.</div>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-                    </div>
-                    <!--Specifications -->
-         
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="engine_size" class="form-label">Engine Size</label>
-                        <input type="number" class="form-control" id="engine_size" name="engine_size" required>
-                        <div class="invalid-feedback">Please provide the engine size.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="transmission" class="form-label">Transmission</label>
-                        <input type="text" class="form-control" id="transmission" name="transmission" required>
-                        <div class="invalid-feedback">Please provide the transmission type.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="top_speed" class="form-label">Top Speed</label>
-                        <input type="number" class="form-control" id="top_speed" name="top_speed" required>
-                        <div class="invalid-feedback">Please provide the top speed.</div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="power" class="form-label">Power</label>
-                        <input type="number" class="form-control" id="power" name="power" required>
-                        <div class="invalid-feedback">Please provide the power.</div>
-                    </div>
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type" name="type" required>
+                    <option value="">Select Type</option>
+                    <option value="imported">Imported</option>
+                    <option value="showroom">In Showroom</option>
+                    <option value="selling_on_behalf">Selling on Behalf</option>
+                </select>
+                <div class="invalid-feedback">Please select the motorcycle type.</div>
             </div>
+            <div class="col-md-6 mb-3">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price" name="price" required>
+                <div class="invalid-feedback">Please provide the price.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" name="status" required>
+                    <option value="">Select Status</option>
+                    <option value="in_showroom">In Showroom</option>
+                    <option value="selling_on_behalf">Selling on Behalf</option>
+                </select>
+                <div class="invalid-feedback">Please select the status.</div>
+            </div>
+            <div class="col-12 mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+        </div>
 
-            <!--Images -->
-           
-                <div class="mb-3">
-                    <label for="images" class="form-label">Upload Images</label>
-                    <input type="file" class="form-control" id="images" name="images[]" multiple required>
-                    <div class="invalid-feedback">Please upload at least one image.</div>
-                </div>
-       
-
-            <!-- Navigation Buttons -->
-            <div>
-                <button type="submit" class="btn btn-dark" id="submitForm">Save</button>
+        <!-- Specifications -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="engine_size" class="form-label">Engine Size</label>
+                <input type="number" class="form-control" id="engine_size" name="engine_size" required>
+                <div class="invalid-feedback">Please provide the engine size.</div>
             </div>
-                </div>
+            <div class="col-md-6 mb-3">
+                <label for="transmission" class="form-label">Transmission</label>
+                <input type="text" class="form-control" id="transmission" name="transmission" required>
+                <div class="invalid-feedback">Please provide the transmission type.</div>
             </div>
+            <div class="col-md-6 mb-3">
+                <label for="top_speed" class="form-label">Top Speed</label>
+                <input type="number" class="form-control" id="top_speed" name="top_speed" required>
+                <div class="invalid-feedback">Please provide the top speed.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="power" class="form-label">Power</label>
+                <input type="number" class="form-control" id="power" name="power" required>
+                <div class="invalid-feedback">Please provide the power.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="fuel_consumption" class="form-label">Fuel Consumption</label>
+                <input type="number" class="form-control" id="fuel_consumption" name="fuel_consumption" required>
+                <div class="invalid-feedback">Please provide the fuel consumption.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="fuel_tank_capacity" class="form-label">Fuel Tank Capacity</label>
+                <input type="number" class="form-control" id="fuel_tank_capacity" name="fuel_tank_capacity" required>
+                <div class="invalid-feedback">Please provide the fuel tank capacity.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="weight" class="form-label">Weight</label>
+                <input type="number" class="form-control" id="weight" name="weight" required>
+                <div class="invalid-feedback">Please provide the weight.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="clutch_type" class="form-label">Clutch Type</label>
+                <input type="text" class="form-control" id="clutch_type" name="clutch_type" required>
+                <div class="invalid-feedback">Please provide the clutch type.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="brake_type" class="form-label">Brake Type</label>
+                <input type="text" class="form-control" id="brake_type" name="brake_type" required>
+                <div class="invalid-feedback">Please provide the brake type.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="front_tire_size" class="form-label">Front Tire Size</label>
+                <input type="text" class="form-control" id="front_tire_size" name="front_tire_size" required>
+                <div class="invalid-feedback">Please provide the front tire size.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="rear_tire_size" class="form-label">Rear Tire Size</label>
+                <input type="text" class="form-control" id="rear_tire_size" name="rear_tire_size" required>
+                <div class="invalid-feedback">Please provide the rear tire size.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="key_system" class="form-label">Key System</label>
+                <input type="text" class="form-control" id="key_system" name="key_system" required>
+                <div class="invalid-feedback">Please provide the key system.</div>
+            </div>
+        </div>
 
-            
-        </form>
+        <!-- Images -->
+        <div class="mb-3">
+            <label for="images" class="form-label">Upload Images</label>
+            <input type="file" class="form-control" id="images" name="images[]" multiple required>
+            <div class="invalid-feedback">Please upload at least one image.</div>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+            <button type="submit" class="btn btn-dark" id="submitForm">Save</button>
+        </div>
+    </div>
+</form>
+
 </div>
       </div>
     </div>
