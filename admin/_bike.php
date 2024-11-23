@@ -8,7 +8,6 @@ if ($_SESSION['token'] !== $_POST['csrf_token']) {
     exit('Forbidden: Invalid CSRF token.');
 }
 
-// Bot Detection
 if (!empty($_POST['extrainfo'])) {
     http_response_code(403); // Forbidden
     exit('Forbidden: Bot detected.');
