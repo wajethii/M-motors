@@ -22,7 +22,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg border-bottom bg-white fixed-top border-body p-2">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="index.html">
           <img src="src/mmotors.png" alt="M-motors Logo" class="logo-img" />
         </a>
         <button
@@ -49,7 +49,7 @@
                 Motorcycles
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="allbikes.php">All</a></li>
+                <li><a class="dropdown-item" href="allbikes.html">All</a></li>
                 <li>
                   <a class="dropdown-item" href="#">Available in Kenya</a>
                 </li>
@@ -57,17 +57,17 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="sell.php">Sell Your Motorcycle</a>
+              <a class="nav-link text-dark" href="sell.html">Sell Your Motorcycle</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="#">Who We Are</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" href="contacts.php">Contacts</a>
+              <a class="nav-link text-dark" href="contacts.html">Contacts</a>
             </li>
           </ul>
           <!-- Icons -->
-          <a class="nav-link me-3" href="login.php"
+          <a class="nav-link me-3" href="#"
             ><i class="bi bi-person text-dark"></i
           ></a>
           <a class="nav-link" href="#"><i class="bi bi-cart2 text-dark"></i></a>
@@ -81,8 +81,8 @@
             <div class="col-12 col-md-6 mt-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                  <li class="breadcrumb-item"><a href="allbikes.php">Motorcycles</a></li>
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="allbikes.html">Motorcycles</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Yamaha</li>
                 </ol>
               </nav>
