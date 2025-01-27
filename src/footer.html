@@ -55,6 +55,12 @@
   
       <!-- Copyright Section -->
       <div class="container text-center mt-3">
-        <p class="mb-0">&copy; 2024 M-Motors. All rights reserved.</p>
+         <div class="col-12">
+                    <p class="text-dark">&copy; <span id="current-year"></span> All rights reserved.</p>
+                </div>
       </div>
     </footer>
+    <script>// Dynamically set the current year
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+});</script>
